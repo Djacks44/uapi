@@ -37,6 +37,7 @@ function handleAuthResult(authResult) {
     loadAPIClientInterfaces();
     alert("no")
   } else {
+     console.log("yes")
     // Make the #login-link clickable. Attempt a non-immediate OAuth 2.0
     // client flow. The current function is called when that flow completes.
     $('#login-link').click(function() {
@@ -44,7 +45,6 @@ function handleAuthResult(authResult) {
         client_id: OAUTH2_CLIENT_ID,
         scope: OAUTH2_SCOPES,
         immediate: false
-        alert('yes')
         }, handleAuthResult);
     });
   }
